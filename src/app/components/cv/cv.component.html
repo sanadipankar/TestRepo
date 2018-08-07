@@ -1,0 +1,52 @@
+<p>
+  Resume - Personal Info
+</p>
+
+<div class="container">
+<div class="row">
+<div class="sec1 col-lg-7 col-md-7 col-sm-12 col-xs-12">
+<button (click) = "addCv({name:'EXTRACURRICULAR ACTIVITIES',name1:'Painting',isActive:true})"
+[disabled]="!enableAdd" class="btn btn-block mb-3" >Add New Skill</button>
+<ul class="list-unstyled" *ngIf="loaded && cvs?.length > 0">
+  <li class="card card-body mb-4" *ngFor="let cv of cvs" [class.bg-light]="cv.isActive" [style.border-color]="cv.isActive ? 'steelblue' : ''">
+    <h3 [ngStyle]="currentStyles">{{ cv.name | uppercase }}</h3>
+    <ul class="list-group" *ngIf="showExtended && cv.skills.skill3 && cv.skills.skill4 && cv.skills.skill5"> 
+      <li class="list-group-item">skill1:{{cv.skills.skill1}}</li>
+      <li class="list-group-item">skill2:{{cv.skills.skill2}}</li>
+      <li class="list-group-item">skill3:{{cv.skills.skill3}}</li>
+      <li class="list-group-item">skill4:{{cv.skills.skill4}}</li>
+      <li class="list-group-item">skill5:{{cv.skills.skill5}}</li>
+      <li class="list-group-item">skill6:{{cv.skills.skill6}}</li>
+      <li class="list-group-item">Joined: {{cv.registered | date:"mm/dd/yyyy"}}</li>
+      
+    </ul>
+  </li>
+</ul>
+<h4 *ngIf="cvs?.length == 0">
+  No users found
+</h4>
+
+<h4 *ngIf ="!loaded">Loading Users..</h4>
+</div>
+
+<div class="sec2 col-lg-5 col-md-5 col-sm-12 col-xs-12">
+  <div class="" *ngFor="let cv of cvs">
+      <ul class="list-unstyled">
+        <li><h2>{{cv.name1}}</h2></li>
+        <ul class="list-unstyled list-group">
+          <li>{{cv.sec1.profile1}}</li>
+          <li>{{cv.sec1.workplace1}}</li>
+          <li>{{cv.sec1.duration1}}</li>
+          <li>{{cv.sec1.description1}}</li>
+        </ul>
+
+      </ul>
+      
+      
+      <!--<img [src] ="cv.image" alt="img1">-->
+      <!--<img src ="{{cv.image}}" alt="img1">-->
+      <!--<img bind-src ="cv.image" alt="img1">-->
+  </div>
+</div>
+</div>
+</div>

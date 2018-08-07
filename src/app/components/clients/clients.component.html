@@ -1,0 +1,14 @@
+<div class="row">
+    <ul class="list-unstyled">
+      <li class="media" *ngFor="let client of clients">
+        <img class="mr-3" src="" alt="Generic placeholder image">
+        <div class="media-body">
+          <h2 class="mt-0 mb-1">{{client.clientname}}</h2>
+          <h4>{{client.clientmailid}}</h4>
+          <p>{{client.comment}}</p>
+        </div>
+      </li>
+     
+      
+    </ul>
+  </div>

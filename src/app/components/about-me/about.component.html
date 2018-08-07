@@ -1,0 +1,26 @@
+<h2>{{ about.name }}</h2>
+<div class="row">
+<div class="sec1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<ul class="list-unstyled">
+  <li><span>Name:</span> {{about.name}}</li>
+  <li><span>DOB :</span> {{about.dob}}</li>
+  <li><span>Age:</span> {{ about.age }}</li>
+  <li><span>Address:</span> {{ about.address.street }}
+    {{ about.address.city }}{{ about.address.state }} 
+    {{ about.address.pin }} {{ about.address.country }}</li>
+  <li><span>Email:</span> {{ about.email }}</li>
+  <li><span>Phone:</span> {{ about.phone }} </li>
+  <li><span>Website:{{ about.website }}</span></li>
+</ul>
+</div>
+<div class="sec1 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+</div>
+</div>
+<div class="row">
+    <h3>{{about.servicename}}<small><button (click) = " about.hide = !about.hide" class="btn btn-dark btn-sm"><i [ngClass]=" about.hide ? 'fas fa-angle-up' : 'fas fa-angle-up'"></i></button></small></h3>
+    <ul class="list-group">
+      <li class="list-group-item">{{about.services.heading}}</li>
+      <li class="list-group-item" *ngIf="!about.hide && about.services.bodypart">{{about.services.bodypart}}</li>
+    </ul>
+</div>

@@ -1,0 +1,85 @@
+<div class="row">
+  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+      <h1>{{contact.sec1}}</h1>
+      <ul class="list-unstyled">
+        <li><span>Address : </span>{{contact.address}}</li>
+        <li><span>Email : </span>{{contact.email}}</li>
+        <li><span>Phone : </span>{{contact.phone}}</li>
+        <li><span>Website : </span>{{contact.website}}</li>
+        <li><span>skype : </span>{{contact.skype}}</li>
+        <li><span>linkedin : </span>{{contact.linkedin}}</li>
+        <li><span>github : </span>{{contact.github}}</li>
+      </ul>
+      
+  </div>
+  <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+   <!--- <button (click) = "showContactForm = !showContactForm" class="btn btn-dark mb-3">Add Comment</button>
+    <div class="card card-body mb-3" *ngIf="showContactForm">
+      Form test
+      <form (submit)="onSubmit($event)">
+          <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" [(ngModel)]="contact.clients.clientname" class="form-control" name="your Name">
+          </div>
+          {{contact.clients.clientname}}
+          <div class="form-group">
+              <label>Your Email</label>
+              <input type="text" [(ngModel)]="contact.clients.clientmailid" class="form-control" name="email">
+          </div>
+
+          <div class="form-group">
+              <label>Your Message</label>
+              <input type="text" [(ngModel)]="contact.clients.comment" class="form-control" name="comment">
+          </div>
+      <button (click) ="addComment()" [disabled]="contact.clients.name == '' || contact.clients.clientmailid == ''" class="btn btn-block mb-3">Add New User</button>
+      </form>
+    </div>-->
+  </div>
+
+  <!--<div class="media">
+    <img class="align-self-end mr-3" src="..." alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0">{{contact.clients.clientname}}</h5>
+      <h5 class="mt-0">{{contact.clients.clientmailid}}</h5>
+      <p>{{contact.clients.comment}}</p>
+    </div>
+</div>
+<br/>-->
+<div class="row">
+    <app-clients></app-clients>
+</div>
+<!--<div class="row">
+  <div class="media">
+    <img class="align-self-end mr-3" src="..." alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0">{{contact.clients.clientname}}</h5>
+      <h5 class="mt-0">{{contact.clients.clientmailid}}</h5>
+      <p>{{contact.clients.comment}}</p>
+    </div>
+  </div>
+</div>-->
+<!--<div class="row">
+  <ul class="list-unstyled">
+    <li class="media" *ngFor="let comment of comments">
+      <img class="mr-3" src="..." alt="Generic placeholder image">
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">{{comment.name}}</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      </div>
+    </li>
+    <li class="media my-4">
+      <img class="mr-3" src="..." alt="Generic placeholder image">
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">List-based media object</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      </div>
+    </li>
+    <li class="media">
+      <img class="mr-3" src="..." alt="Generic placeholder image">
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">List-based media object</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      </div>
+    </li>
+  </ul>
+</div>-->
